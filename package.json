@@ -1,0 +1,23 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subasoundhar/personal-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subasoundhar/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/Subasoundhar/personal-portfolio#readme",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
