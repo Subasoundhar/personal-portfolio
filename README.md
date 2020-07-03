@@ -75,6 +75,8 @@ in the style sheet
 
 Name : Subalakshmi S
 
-Mobile: 9384462990
+Mobile: 93******90
 
 [Clone this  repo to your local machine use this link](https://github.com/Subasoundhar/personal-portfolio.git)
+
+[If you have any doubt about this repo please ask the questions in this mail](subapriyaece99@gmail.com)
