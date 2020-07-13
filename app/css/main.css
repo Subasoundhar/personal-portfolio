@@ -1,0 +1,140 @@
+body{
+    background-color: lightpink;
+    font-family: 'cursive';
+    
+}
+.container{
+    width: 800px;  
+    margin: auto;
+    background-color: lemonchiffon;
+    padding: 0px 20px;
+    padding-bottom: 10px;
+}
+header h1{
+    font-size: 40px;
+    font-family: Pattaya;
+    padding: 20px 0;
+}
+header img{
+    width: 10%;
+}
+header .connect{
+    background-color: lightgray;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+header .connect a{
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: lightskyblue
+}
+header .connect a:link{
+    color: orangered;
+}
+header .connect a:hover{
+    color: maroon;
+}
+header .connect a:active{
+    color: mediumblue;
+}
+header .connect a:visited{
+    color: mediumorchid;
+}
+.information{
+    border: solid lemonchiffon;
+    margin: 0 0 30px;
+    padding-bottom: 10px;
+}
+.information h3{
+    background-color: lightgrey;
+    padding: 20PX;
+    font-size: 22px;
+}
+.information .info-data,
+.information .info-data-1{
+    padding: 20px 10px;
+    font-size: 20px;
+    border: 1px;
+    width: 97%;
+}
+.information .info-data-1{
+    border: none;
+}
+.table-1 td{
+    border: solid 2px lightgreen;
+    padding: 10px;
+}
+.table-1 th{
+    background-color: lightgreen;
+    border: solid 2px lightgreen;
+    padding: 10px;
+    width: 155px;
+}
+.info-list-1{
+    list-style: lower-roman;
+    list-style-position: inside;
+    line-height: 2;
+}
+.info-list-2{
+    list-style: square;
+    list-style-position: inside;
+} 
+.table-3 td{
+    padding: 10px;
+}
+.table-2 tr{
+    padding: 50px; 
+   
+}  
+.table-2 td{
+    border: solid 10px none; 
+}
+.table-3{
+    font-size: 20px;
+    border: none;
+    width: 85%;
+}
+.table-3 td p{
+    text-align: right;
+}
+.form-style-1 .fixed-width{
+    min-width: 180px;
+    display: inline-block;
+}
+
+.form-style-1 .input-section{
+    margin-bottom: 20px;
+}
+.form-style-1 .action-section{
+    margin-left: 185px;
+    display: inline-block;
+}
+.form-style-1 input[type='text'],
+.form-style-1 input[type='email'],
+.form-style-1 input[type='tel'],
+.form-style-1 select,
+.form-style-1 textarea{
+    border: solid 1px maroon;
+    padding: 6px;
+    min-width: 300px;
+}
+.form-style-1 textarea{
+    min-height: 150px;
+}
+.form-style-1 input:focus{
+    border-color: maroon;
+    outline: none;
+    box-shadow: maroon 0 0 10px;
+}
+.primary-button{
+    background-color: lightpink;
+    border: none;
+    padding: 10px 30px;
+    color: blue;
+    cursor: pointer;
+    font-size: 15px;
+}
+.information-1{
+    border-top: solid 50px lemonchiffon;
+}
