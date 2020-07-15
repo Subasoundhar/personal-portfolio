@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: lightpink;
     font-family: 'cursive';
@@ -57,6 +60,7 @@ header .connect a:visited{
     font-size: 20px;
     border: 1px;
     width: 97%;
+    overflow: auto;
 }
 .information .info-data-1{
     border: none;
