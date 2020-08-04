@@ -1,9 +1,6 @@
-*{
-    box-sizing: border-box;
-}
 body{
     background-color: lightpink;
-    font-family: 'cursive';
+    font-family: font-family: 'Cherry Swash', cursive;
     
 }
 .container{
@@ -18,9 +15,6 @@ header h1{
     font-family: Pattaya;
     padding: 20px 0;
 }
-header img{
-    width: 10%;
-}
 header .connect{
     background-color: lightgray;
     padding: 0 20px;
@@ -30,7 +24,7 @@ header .connect a{
     padding: 10px 30px;
     display: inline-block;
     text-decoration: none;
-    color: lightskyblue
+    color: ; lightskyblue
 }
 header .connect a:link{
     color: orangered;
@@ -54,16 +48,15 @@ header .connect a:visited{
     padding: 20PX;
     font-size: 22px;
 }
-.information .info-data,
-.information .info-data-1{
+.information .info-data{
     padding: 20px 10px;
     font-size: 20px;
-    border: 1px;
-    width: 97%;
-    overflow: auto;
 }
-.information .info-data-1{
-    border: none;
+.table-1{
+
+}
+.table-1 tr{
+    
 }
 .table-1 td{
     border: solid 2px lightgreen;
@@ -73,12 +66,10 @@ header .connect a:visited{
     background-color: lightgreen;
     border: solid 2px lightgreen;
     padding: 10px;
-    width: 155px;
 }
 .info-list-1{
     list-style: lower-roman;
     list-style-position: inside;
-    line-height: 2;
 }
 .info-list-2{
     list-style: square;
@@ -91,17 +82,15 @@ header .connect a:visited{
     padding: 50px; 
    
 }  
+}
 .table-2 td{
-    border: solid 10px none; 
+    border: solid 10px none;
+    
 }
 .table-3{
     font-size: 20px;
-    border: none;
-    width: 85%;
 }
-.table-3 td p{
-    text-align: right;
-}
+
 .form-style-1 .fixed-width{
     min-width: 180px;
     display: inline-block;
@@ -141,4 +130,15 @@ header .connect a:visited{
 }
 .information-1{
     border-top: solid 50px lemonchiffon;
+}
+.info-data p {
+    padding: 5px;
+    margin-bottom: 17px;
+}
+.error-message{
+    color: red;
+    margin-left: 185px;
+    padding: 6px 0 0 0;
+    font-size: 12px;
+    display: none;
 }
