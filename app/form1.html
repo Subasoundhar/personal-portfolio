@@ -177,23 +177,19 @@ timely by applying best of my knowledge and skills.
             <div class="input-section">
                 <label class="fixed-width" for="full-name">Name</label>
                 <input type="text" name="fullname" id="full-name"> 
-                <div class="error-message" id="full-name-error">This field is mandatory</div>
             </div>
             <div class="input-section">
                 <label class="fixed-width" for="email-id">Email ID</label>
                 <input type="email" name="email" id="email-id"> 
-                <div class="error-message" id="email-error">This field is mandatory</div>
             </div>
             <div class="input-section">
                 <label class="fixed-width" for="mobile-num">Mobile Number</label>
                 <input type="tel" name="mobile-number" id="mobile-num"> 
-                <div class="error-message" id="mobile-error">This field is mandatory</div>
             </div>
             <div class="input-section">
                 <label class="fixed-width" for="">Gender</label>
                 <input type="radio" name="gender" id="gender-male"> <label for="">Male</label>
                 <input type="radio" name="gender" id="gender-female"> <label for="">Female</label>
-                <div class="error-message" id="gender-error">This field is mandatory</div>
             </div>
             <div class="input-section">
                 <label class="fixed-width" for="lang">Languages Known</label>
@@ -207,7 +203,6 @@ timely by applying best of my knowledge and skills.
                 Telungu
                 <input type="checkbox" name="language" id="language-malayalam">
                 Malayalam
-                <div class="error-message" id="language-error">This field is mandatory</div>
             </div>
             <div class="input-section">
                 <label class="fixed-width" for="country">Country</label>
@@ -218,12 +213,10 @@ timely by applying best of my knowledge and skills.
                     <option value="CHI">China</option>
                     <option value="PAR">Paris</option>  
                 </select>
-                <div class="error-message" id="country-error">This field is mandatory</div>
             </div>
             <div class="input-section">
                 <label class="fixed-width" for="">Message</label>
                 <textarea name="message" id="text-message"></textarea>
-                <div class="error-message" id="message-error">This field is mandatory</div>
             </div>
             <div class="action-section">
                 <input type="button" value="Send" class="primary-button" id="form-button">
@@ -261,33 +254,63 @@ timely by applying best of my knowledge and skills.
 
     }
 
+    function addErrorMessage(targetElement){
+
+        //check if error message is already available
+        var errorElement = targetElement.parentNode.getElementsByClassName('error-message')[0];
+        if(errorElement != undefined){
+            return false
+        }
+
+        //create a 'div' tag
+        var errorMessageElement = document.createElement('div');
+
+        //Add text to that tag
+        errorMessageElement.innerHTML = 'This field is mandatory';
+
+        //Add classname
+        errorMessageElement.classList.add("error-message");
+        
+        targetElement.parentNode.appendChild(errorMessageElement);
+
+    }
+    function removeErrorMessage(targetElement){
+        // Select Error Element
+        var errorElement = targetElement.parentNode.getElementsByClassName('error-message')[0];
+        if(errorElement != undefined){
+            errorElement.parentNode.removeChild(errorElement);
+        }
+    }
+
     function validateForm(){
 
         // Check if name is Empty
         var nameElement = document.getElementById('full-name');
         var username = nameElement.value;
         if(username == "" || username == null){
-            document.getElementById('full-name-error').style.display = "block";
+            //document.getElementById('full-name-error').style.display = "block";
+            addErrorMessage(nameElement);
         }else{
-            document.getElementById('full-name-error').style.display = "none";
+            //document.getElementById('full-name-error').style.display = "none";
+            removeErrorMessage(nameElement);
         }
 
         // Check if email is Empty
         var emailElement = document.getElementById('email-id');
         var usermail =  emailElement.value;
         if(usermail == "" || usermail == null){
-            document.getElementById('email-error').style.display = "block";
+            addErrorMessage(emailElement);
         }else{
-            document.getElementById('email-error').style.display = "none";
+            removeErrorMessage(emailElement);
         }
 
         // Todo: Check if mobile is Empty
         var mobileElement = document.getElementById('mobile-num');
         var usermobile = mobileElement.value;
         if(usermobile == "" || usermobile == null){
-            document.getElementById('mobile-error').style.display = "block";
+            addErrorMessage(mobileElement);
         }else{
-            document.getElementById('mobile-error').style.display = "none";
+            removeErrorMessage(mobileElement);
         } 
 
         // Check if gender is selected
@@ -298,9 +321,9 @@ timely by applying best of my knowledge and skills.
             isFemaleElementSelected = femaleElement.checked
 
         if(isMaleElementSelected || isFemaleElementSelected){
-            document.getElementById('gender-error').style.display = "none";
+            removeErrorMessage(femaleElement);
         }else{
-            document.getElementById('gender-error').style.display = "block";
+            addErrorMessage(femaleElement);
         }
 
         // Todo: Check if at least one Language is selected
@@ -320,27 +343,27 @@ timely by applying best of my knowledge and skills.
             ismalayalamlanguageselected = malayalamlang.checked;
 
         if(istamillanguageselected || isenglishlanguageselected ||ishindilanguageselected ||istelungulanguageselected ||ismalayalamlanguageselected){
-               document.getElementById('language-error').style.display = "none";
+            removeErrorMessage(tamillang);
         }else{
-            document.getElementById('language-error').style.display = "block";
+            addErrorMessage(tamillang);
         }
 
         // Check if country if given
         var countryelement = document.getElementById('country'),
             country = countryelement.value;
         if(country == "" || country == null){
-            document.getElementById('country-error').style.display = "block";
+            addErrorMessage(countryelement);
         }else{
-            document.getElementById('country-error').style.display = "none";
+            removeErrorMessage(countryelement);
         }
 
         // Todo: Check if something is given in textarea
         var messageElement = document.getElementById('text-message'),
             message = messageElement.value;
         if(message == "" || message == null){
-            document.getElementById('message-error').style.display = "block";
+            addErrorMessage(messageElement);
         }else{
-            document.getElementById('message-error').style.display = "none";
+            removeErrorMessage(messageElement);
         } 
     }
 
